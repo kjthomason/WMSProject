@@ -1,0 +1,167 @@
+#: import FadeTransition kivy.uix.screenmanager.FadeTransition
+ScreenManagement:
+    transition: FadeTransition()
+    MainScreen:
+    LV_SELECT:
+    HV_SELECT:
+    AnotherScreen:
+    Forklift_Select:
+
+
+<MainScreen>:
+    name: 'main'
+
+    Label:
+        text: 'Please Choose A Warehouse'
+        size_hint_x: 0.20
+        size_hint_y: 0.15
+        font_size: 20
+        pos_hint: {'x': 0.40, 'y': 0.75}
+
+    Button:
+        on_release: app.root.current = 'other'
+        text: 'HV'
+        size_hint_x: 0.20
+        size_hint_y: 0.15
+        font_size: 30
+        pos_hint: {'x': 0.60, 'y': 0.55}
+
+    Button:
+        on_release: app.root.current = 'lv_select'
+        text: 'LV'
+        font_size: 30
+        size_hint_x: 0.20
+        size_hint_y: 0.15
+        pos_hint: {'x': 0.20, 'y': 0.55}
+
+<LV_SELECT>:
+    name: 'lv_select'
+
+    Label:
+        text: 'Please Choose A Device'
+        size_hint_x: 0.30
+        size_hint_y: 0.20
+        font_size: 20
+        pos_hint: {'x': 0.30, 'y': 0.75}
+
+    Button:
+        on_release: app.root.current = 'fork_select'
+        text: 'FORKLIFT'
+        font_size: 12
+        size_hint_x: 0.30
+        size_hint_y: 0.20
+        pos_hint: {'x': 0.1, 'y': 0.35}
+
+    Button:
+        on_release: app.root.current = 'main'
+        text: 'RF GUN'
+        font_size: 12
+        size_hint_x: 0.30
+        size_hint_y: 0.20
+        pos_hint: {'x': 0.1, 'y': 0.05}
+
+    Button:
+        on_release: app.root.current = 'main'
+        text: 'REC TABLET'
+        font_size: 12
+        size_hint_x: 0.30
+        size_hint_y: 0.20
+        pos_hint: {'x': 0.6, 'y': 0.35}
+
+    Button:
+        on_release: app.root.current = 'main'
+        text: 'DESKTOP'
+        font_size: 12
+        size_hint_x: 0.30
+        size_hint_y: 0.20
+        pos_hint: {'x': 0.6, 'y': 0.05}
+
+<Forklift_Select>:
+    name : 'fork_select'
+    Label:
+        id: a
+        text: '-----------Publix - ALV - Forklift Mounted-----------'
+        center: root.center
+        top: root.top
+        font_size: 20
+        size_hint: None, None
+        size: self.texture_size
+    Button:
+        on_release: app.root.current = 'main'
+        text: 'Next Assignment'
+        font_size: 12
+        size_hint_x: 0.3
+        size_hint_y: 0.1
+        pos_hint: {'x': 0.1, 'y': 0.8}
+    Button:
+        on_release: app.root.current = 'main'
+        text: 'Next Work'
+        font_size: 12
+        size_hint_x: 0.30
+        size_hint_y: 0.1
+        pos_hint: {'x': 0.6, 'y': 0.8}
+    Button:
+        on_release: app.root.current = 'main'
+        text: 'Work Remaining'
+        font_size: 12
+        size_hint_x: 0.3
+        size_hint_y: 0.1
+        pos_hint: {'x': 0.1, 'y': 0.70}
+    Button:
+        on_release: app.root.current = 'main'
+        text: 'Cherry Picker'
+        font_size: 12
+        size_hint_x: 0.3
+        size_hint_y: 0.1
+        pos_hint: {'x': 0.1, 'y': 0.60}
+    Button:
+        on_release: app.root.current = 'main'
+        text: 'Cherry Picker'
+        font_size: 12
+        size_hint_x: 0.3
+        size_hint_y: 0.1
+        pos_hint: {'x': 0.1, 'y': 0.60}
+    Button:
+        on_release: app.root.current = 'main'
+        text: 'Inventory Menu'
+        font_size: 12
+        size_hint_x: 0.3
+        size_hint_y: 0.1
+        pos_hint: {'x': 0.1, 'y': 0.10}
+        background_color: (1.0, 0.0, 0.0, 1.0)
+    Button:
+        on_release: app.root.current = 'main'
+        text: 'TERMINATE'
+        font_size: 12
+        size_hint_x: 0.3
+        size_hint_y: 0.1
+        pos_hint: {'x': 0.6, 'y': 0.10}
+        background_color: (1.0, 0.0, 0.0, 1.0)
+    Button:
+        on_release: app.root.current = 'main'
+        text: 'License Plate Location'
+        font_size: 12
+        size_hint_x: 0.3
+        size_hint_y: 0.1
+        pos_hint: {'x': 0.6, 'y': 0.70}
+    Button:
+        on_release: app.root.current = 'main'
+        text: 'Time Manager'
+        font_size: 12
+        size_hint_x: 0.3
+        size_hint_y: 0.1
+        pos_hint: {'x': 0.6, 'y': 0.60}
+
+
+
+
+
+
+<AnotherScreen>:
+    name: 'other'
+
+    Button:
+        on_release: app.root.current = 'main'
+        text: 'back to the home screen'
+        font_size: 12
+        size: 70, 150

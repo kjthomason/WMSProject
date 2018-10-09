@@ -1,0 +1,3 @@
+Started working with Kivy in Python3 to create a GUI
+
+I really couldn't stand the console UI. 
